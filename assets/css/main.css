@@ -2778,6 +2778,70 @@ input, select, textarea {
 			height: 9.5em;
 		}
 
+ /* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 1em;
+    left: 1.5em;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #69a07f;
+}
+
+/* Navigation Bar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    padding: 2em 1em;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+}
+
+.nav.active {
+    left: 0;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+	font-size: 13px;
+	margin-top: 30px;
+
+}
+
+.nav ul li {
+    margin: 1.03em 0;
+	padding-right: 0;
+}
+
+.nav ul li a {
+    color: #69a07f;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.nav ul li a:hover {
+    color: #333;
+}
+
+
+
+
 /* Footer */
 
 	#footer .icons {
