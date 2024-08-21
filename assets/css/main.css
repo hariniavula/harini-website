@@ -407,6 +407,10 @@ input, select, textarea {
 
 /* Row */
 
+		.row p{
+			font-size: 14px;
+		}
+
 	.row {
 		display: flex;
 		flex-wrap: wrap;
@@ -647,6 +651,8 @@ input, select, textarea {
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 5em;
 				}
+
+			
 
 		@media screen and (max-width: 1800px) {
 
@@ -2190,7 +2196,7 @@ input, select, textarea {
 			text-align: center;
 		}
 
-			.image.thumb:after {
+			/* .image.thumb:after {
 				-moz-transition: opacity 0.2s ease-in-out;
 				-webkit-transition: opacity 0.2s ease-in-out;
 				-ms-transition: opacity 0.2s ease-in-out;
@@ -2226,8 +2232,89 @@ input, select, textarea {
 		.image img {
 			border-radius: 0.35em;
 			display: block;
+		} */
+
+		.work-list {
+			display: grid; 
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			grid-gap: 35px; 
+			margin-top: 50px;
+		}
+		.work {
+			border-radius: 10px; 
+			position: relative; 
+			overflow: hidden;
+			background: #fff;
+			transition: transform 0.3s;
+			width: 350px;
+		}
+		
+		.work img {
+			border-radius: 5px 5px 5px 5px; 
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			border: 1px solid #d1d7d3;
+		}
+		
+		.layer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			transition: opacity 0.5s;
+			border-radius: 10px 10px 0 0;
+		}
+		
+		.layer a {
+			margin: 0 10px;
+			color: white;
+			font-size: 18px;
+			text-decoration: none;
 		}
 
+		.layer p {
+			
+			color: white;
+		}
+		
+		.work:hover .layer {
+			opacity: 100;
+		}
+		
+		.description {
+			text-align: left;
+			border-radius: 0 0 10px 10px;
+			padding: 5px;
+	
+		}
+		
+		.description h3 {
+			margin: 0;
+			font-size: 14px;
+			font-weight: 600;
+			color: #333;
+		}
+		
+		.description h6 {
+			margin: 10px 0 5px;
+			font-size: 11px;
+			color: #666;
+		}
+		
+		.description p {
+			margin: 0;
+			font-size: 13px;
+			color: #333;
+		}
+		
+		
 		.image.left {
 			float: left;
 			margin: 0 1.5em 1em 0;
